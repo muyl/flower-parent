@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flower.mapper.SysUserMapper">
+
+    <resultMap type="com.flower.core.entity.SysUser" id="sysUserMap">
+        <result property="userId" column="USER_ID" jdbcType="VARCHAR"/>
+        <result property="password" column="PASSWORD" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryUserList" resultMap="sysUserMap">
+       select user_id,password from sys_user
+    </select>
+
+
+
+</mapper>
